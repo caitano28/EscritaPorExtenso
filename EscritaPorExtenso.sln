@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EscritaPorExtenso.Testes", "EscritaPorExtenso.Testes\EscritaPorExtenso.Testes.csproj", "{4DC7AC10-7323-4BE2-8A3C-57C48BDE6CE9}"
 EndProject
@@ -12,8 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		appveyor.yml = appveyor.yml
 		README.md = README.md
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EscritaPorExtenso.Api", "EscritaPorExtenso.Api\EscritaPorExtenso.Api.csproj", "{BC67D39A-BF3C-4F09-9FC5-9B595A5675AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,12 +27,11 @@ Global
 		{C166C8C6-7CD1-4248-B190-58642BF691E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C166C8C6-7CD1-4248-B190-58642BF691E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C166C8C6-7CD1-4248-B190-58642BF691E3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BC67D39A-BF3C-4F09-9FC5-9B595A5675AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BC67D39A-BF3C-4F09-9FC5-9B595A5675AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BC67D39A-BF3C-4F09-9FC5-9B595A5675AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BC67D39A-BF3C-4F09-9FC5-9B595A5675AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {995C80E0-FCF3-4334-907D-E06046E59750}
 	EndGlobalSection
 EndGlobal

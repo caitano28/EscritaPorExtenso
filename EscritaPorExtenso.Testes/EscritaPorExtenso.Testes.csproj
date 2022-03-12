@@ -1,60 +1,31 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4DC7AC10-7323-4BE2-8A3C-57C48BDE6CE9}</ProjectGuid>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <OutputType>Library</OutputType>
-    <RootNamespace>EscritaPorExtenso.Testes</RootNamespace>
-    <AssemblyName>EscritaPorExtenso.Testes</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
     <OutputPath>bin\Debug</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="TesteDeInteiro.cs" />
-    <Compile Include="TesteDeMoeda.cs" />
-    <Compile Include="Ordens\TesteDeCentena.cs" />
-    <Compile Include="Ordens\TesteDeDezena.cs" />
-    <Compile Include="Ordens\TesteDeUnidade.cs" />
-    <Compile Include="Conversor\TesteDoConversor.cs" />
-    <Compile Include="Classes\TesteDeMilhar.cs" />
-    <Compile Include="Classes\TesteDeMilhao.cs" />
-    <Compile Include="TesteDePorcentagem.cs" />
-    <Compile Include="Classes\TesteDePrimeiraClasse.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EscritaPorExtenso\EscritaPorExtenso.csproj">
-      <Project>{C166C8C6-7CD1-4248-B190-58642BF691E3}</Project>
-      <Name>EscritaPorExtenso</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\EscritaPorExtenso\EscritaPorExtenso.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Classes\TesteDeCentesimos.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.3.310801">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="NUnit" Version="3.13.2" />
   </ItemGroup>
 </Project>
